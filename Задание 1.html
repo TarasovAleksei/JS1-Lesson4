@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+	const num=+prompt("введите число от 0 до 999 включительно");
+	function cheking(){
+		if (isNaN(num)){
+		console.log('это не число');
+		} else if(num>999 || num<0){
+			console.log('число не входит в заданный диапазон');
+		} else {
+			const arr=[Math.floor(num/100),Math.floor(num%100/10), num-Math.floor(num/100)*100-Math.floor(num%100/10)*10];
+			const obj={
+				sotni: arr[0],
+				desyatki:arr[1],
+				edinicy:arr[2],
+			};
+			console.log(obj);
+		}	
+	}
+	cheking();
+</script>
+</body>   
+</html>
